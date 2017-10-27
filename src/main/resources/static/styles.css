@@ -1,0 +1,63 @@
+html,body {
+    background-image: url("palms.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+
+
+.header {
+  margin-top: 100px;
+  width: 100%;
+  background-color: rgba(199, 15, 255, 0.6);
+  font-size: 50px;
+  text-align: center;
+  color: white;
+  font-family: 'Lato';
+  height: 240px;
+  border: 6px solid rgb(136, 0, 178);
+  position: relative;
+  max-height: 300px;
+}
+
+.header p{
+  font-size: 30px;
+  font-family: 'Raleway';
+  margin-bottom: 20px;
+  padding: 30px;
+}
+
+
+.header h2{
+  font-size: 50px;
+  padding-top: 60px;
+
+}
+.enter {
+  display: block;
+  color: white;
+  margin: auto;
+  text-align: center;
+  border: 2px solid white;
+  width: 14%;
+  -webkit-transition: 1s;
+  min-width: 200px;
+  max-width: 300px;
+  margin-top: 50px;
+}
+
+.enter:hover{
+  background-color: rgba(255, 255, 255, 0.81);
+  transition: all 1s ease-out;
+
+}
+#cl1 img{
+  display: block;
+  visibility: hidden;
+}

@@ -1,0 +1,148 @@
+body {
+     font: 20px Montserrat, sans-serif;
+     line-height: 1.8;
+     color: #f5f6f7;
+     background-color: black;
+ }
+
+ p {font-size: 16px;}
+ .margin {
+   margin-bottom: 45px;
+ }
+
+ .bg h3{
+   padding-top: 40px;
+   margin-top: 100px;
+   font-size: 50px;
+   font-family: 'Raleway';
+ }
+
+
+ .bg-1 {
+  background-image: url("miami.png");
+  background-size:auto;
+  color:white;
+  height: 900px;
+ }
+ .b3{
+   background-image: url('palms.jpg');
+ }
+ .bg-4 {
+     background-color: #2f2f2f; /* Black Gray */
+     color: #fff;
+ }
+ .container-fluid {
+     padding-top: 70px;
+     padding-bottom: 70px;
+     background-color: white;
+     background-size: cover;
+
+ }
+
+
+ .container-fluid h3{
+   font-size: 35px;
+   font-family: 'Lato';
+ }
+
+#cl1{
+  color: black;
+  font-size: 30px;
+  height: 150px;
+  background-color: white;
+  transition: 0.2s ease-in-out;
+  border: solid 5px #F31588;
+
+}
+
+#cl1 p{
+  margin-bottom: 10px;
+  margin-top: 100px;
+  font-family: 'Raleway';
+  font-size: 20px;
+}
+
+#cl2 p{
+  margin-bottom: 10px;
+  margin-top: 100px;
+  font-family: 'Raleway';
+  font-size: 20px;
+}
+#cl3 p{
+  margin-bottom: 10px;
+  margin-top: 100px;
+  font-family: 'Raleway';
+  font-size: 20px;
+}
+
+
+
+
+#cl2{
+  color:  black;
+  background-color: white;
+  transition: 0.2s ease-in-out;
+    border: solid 5px #F31588;
+  height: 150px;
+}
+
+#cl3{
+  color: black;
+  background-color: white;
+  transition: 0.2s  ease-in-out;
+  border: solid 5px #F31588;
+  height: 150px;
+}
+
+#cl1:hover{
+  background-color: #34055B;
+  color: white;
+}
+#cl2:hover{
+  background-color: #34055B;
+  color: white;
+
+}
+#cl3:hover{
+  background-color: #34055B;
+  color: white;
+
+}
+
+#text1 {
+  visibility: hidden;
+  margin-top: 130px;
+  transition-duration: 1s;
+}
+
+#text2{
+  visibility: hidden;
+  margin-top: 130px;
+  transition-duration: 1s;
+}
+
+#text3{
+  visibility: hidden;
+  margin-top: 130px;
+  transition-duration: 1s;
+}
+
+ a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+
+

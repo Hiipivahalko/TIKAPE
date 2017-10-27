@@ -1,0 +1,47 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Drinkki</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link href="https://fonts.googleapis.com/css?family=Lato|Raleway|Satisfy" rel="stylesheet">
+                <link rel="stylesheet" type="text/css" th:href="@{~/annos.css}">
+                    <!-- Latest compiled and minified CSS -->
+                    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+                        <!-- Latest compiled and minified JavaScript -->
+                        <script src="jquery-3.2.1.min.js"></script>
+                        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+                        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+                        </head>
+                        <body>
+                            <div class = "wrapper">
+
+                                <div class = "header">
+                                </div>
+
+
+                                <h1 id="t1" th:text="${annos.nimi}">Drinkin nimi</h1>
+                                <h2 id="t2">Ainesosat:</h2>
+
+                                <ul>
+                                    <li th:each="aines : ${raaka}" <!--th:each="ohje : ${ohje}"-->>
+                                        <span th:text="${aines.nimi}"> Drinkin aines</span>
+                                        <form th:action="@{~/annokset/muokkaus}" method="POST">
+                                            <input th:type="hidden" name="raakaAineID" th:value="${aines.id}"/>
+                                            <input th:type="hidden" name="ainesID" th:value="${annos.id}"/>
+                                            <input th:type="submit" value="poista"/><br/>
+                                        </form>
+                                    </li>
+                                </ul>                 
+
+                                <a th:href="@{~/annokset/{id}(id=${annos.id})}">
+                                    <div class = "back">
+                                        Muokkaus valmis
+                                    </div>
+                                </a>
+
+                                <div class = "header">
+                                </div>
+                            </div>
+                        </body>
+                        </html>

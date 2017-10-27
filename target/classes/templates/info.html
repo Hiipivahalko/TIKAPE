@@ -1,0 +1,103 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta charset="utf-8">
+                <title>RealBoys</title>
+                <link href="https://fonts.googleapis.com/css?family=Lato|Raleway|Satisfy" rel="stylesheet">
+                    <link rel="stylesheet" type="text/css" th:href="@{~/style2.css}">
+                        <!-- Latest compiled and minified CSS -->
+                        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+                            <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+                            <script>
+                                $(document).ready(function () {
+                                    var position = 'collapsed1';
+
+                                    $("#cl1").click(function () {
+                                        if (position == 'expanded1') {
+                                            $(this).animate({height: '150px'});
+                                            position = 'collapsed1';
+                                            document.getElementById('text1').style.visibility = 'hidden';
+                                        } else {
+                                            $(this).animate({height: '430px'});
+                                            position = 'expanded1';
+                                            document.getElementById('text1').style.visibility = 'visible';
+                                        }
+                                    });
+
+                                    var position = 'collapsed2';
+
+                                    $("#cl2").click(function () {
+                                        if (position == 'expanded2') {
+                                            $(this).animate({height: '150px'});
+                                            position = 'collapsed2';
+                                            document.getElementById('text2').style.visibility = 'hidden';
+                                        } else {
+                                            $(this).animate({height: '430px'});
+                                            document.getElementById('text2').style.visibility = 'visible';
+                                            position = 'expanded2';
+                                        }
+                                    });
+
+
+                                    var position = 'collapsed3';
+
+                                    $("#cl3").click(function () {
+                                        if (position == 'expanded3') {
+                                            $(this).animate({height: '150px'});
+                                            position = 'collapsed3';
+                                             document.getElementById('text3').style.visibility = 'hidden';
+
+                                        } else {
+                                            $(this).animate({height: '430px'});
+                                            position = 'expanded3';
+                                            document.getElementById('text3').style.visibility = 'visible';
+                                        }
+                                    });
+
+                                });
+                            </script>
+                            </script>
+                            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+                            </head>
+                            <body>
+
+                                <!-- First Container -->
+                                <div class="bg-1 text-center">
+                                    <div class = "bg">
+                                        <h3>You can't buy a charisma. Buy a drink, kinda same thing.</h3>
+                                    </div>
+                                </div>
+
+                                <!-- Third Container (Grid) -->
+                                <div class="container-fluid bg-3 text-center">
+                                    <div class="row">
+                                        <div id="cl1" class="col-sm-4 cl1">
+                                            <h3> Keitä olemme </h3>
+                                            <p id="text1">RealBoys DrinkClub</br>
+                                                Suoraan klusterin pimennosta. </br>
+                                                Raikkaita ja ravitsevia drinkkejä.</br>
+                                                Tee omasi, jo tänään!
+                                            </p>
+                                        </div>
+                                        <div id ="cl2" class="col-sm-4 cl2">
+                                            <h3> Drinkkimme?</h3>
+                                            <a th:href="@{~/annokset}">
+                                                <p id = "text2" > Drinkkeihin</p>
+                                            </a>
+                                        </div>
+                                        <div id="cl3" class="col-sm-4 cl3">
+                                            <h3> Get Real</h3>
+                                            <a th:href="@{~/annokset/2}">
+                                                <p id = "text3" >Man the F*** up</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Footer -->
+                                <footer class="bg-4 text-center">
+                                </footer>
+
+                            </body>
+                            </html>

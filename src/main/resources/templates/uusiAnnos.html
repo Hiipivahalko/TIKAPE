@@ -1,0 +1,116 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta charset="utf-8">
+                <title>RealBoys</title>
+                <link href="https://fonts.googleapis.com/css?family=Lato|Raleway|Satisfy" rel="stylesheet">
+                    <link rel="stylesheet" type="text/css" th:href="@{~/drinks.css}">
+                        <!-- Latest compiled and minified CSS -->
+                        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+                            <!-- Latest compiled and minified JavaScript -->
+                            <script src="jquery-3.2.1.min.js"></script>
+                            <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+                            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+                            </head>
+                            <body>
+                                <div class = "col-lg-12">
+                                    <div class = "header">
+                                        <h1>  Rakenna Drinkki</h1>
+                                    </div>
+                                </div>
+
+                                <div class="container-fluid text-center">
+                                    <div class="row content">
+                                        <div class="col-sm-2 sidenav">
+                                        </div>
+                                        <div class="col-sm-8 bg text-center">
+                                            <h1 class = "t1">Rakenna oma drinkki</h1>
+
+                                            <h3 id ="o1">Drinkit</h3>
+                                            <div class = "addform">
+                                                <ul>
+                                                    <li th:each="annos : ${annokset}">
+                                                        <a th:href="@{~/annokset/{id}(id=${annos.id})}">
+                                                            <span class = "annostext" th:text="${annos.nimi}">Annos
+                                                            </span>
+                                                        </a>
+                                                        <form class = "poist" th:action="@{~/uusiAnnos/poisto}"method="POST">
+                                                            <input th:type="hidden" name="drinkkiId" th:value="${annos.id}"/>
+                                                            <button id = "remove" th:type="submit" value="poista">poista</button>
+                                                        </form>
+
+                                                    </li>
+
+                                                </ul>
+                                            </div>
+
+
+                                            <h4>Lisää uusi</h4>
+
+                                            <form th:method="POST" th:action="@{~/uusiAnnos/uusi}">
+                                                Drinkin nimi:<br/>
+                                                <input th:type="text" name="drinkki"/><br/>
+                                                <button th:type="submit" value="Lisää">Lisää</button>
+                                            </form>
+
+                                            <h4>Lisää raaka-aineita</h4>
+
+
+                                            <form th:method="POST" th:action="@{~/uusiAnnos/lisaaAine}">
+                                                Drinkin nimi:<br/>
+                                                <select name="annos2">
+                                                    <option th:each="annos : ${annokset}" th:value="${annos.id}" th:text="${annos.nimi}">
+                                                        drinkki
+                                                    </option>
+                                                </select>
+                                                <br/>
+
+                                                Lisättävä raaka-aine:<br/>
+                                                <select name="aine">
+                                                    <option th:each="aine : ${raakaAineet}" th:value="${aine.id}" th:text="${aine.nimi}">
+                                                        raaka-aine
+                                                    </option>
+                                                </select>
+                                                <br/>
+                                                Määrä<br/>
+                                                <input th:type="text" name="maara"/><br/>
+                                                Ohje<br/>
+                                                <select name="ohje">
+                                                    <option th:each="mitta: ${mitat}" th:text="${mitta}">
+                                                        mitat
+                                                    </option>
+                                                </select>
+                                                <button th:type="submit" value="Lisää">Lisää</button>
+                                            </form>
+
+                                            <p>
+                                                <a th:href="@{~/annokset}">
+                                                    <br/>
+                                                    <div class = "back">
+                                                        Takaisin etusivulle
+                                                    </div>
+                                                </a>
+                                            </p>
+                                        </div>
+                                        <div class="col-sm-2 sidenav">
+                                            <a href="https://www.instagram.com/rikuruokonen/">
+                                                <div class="well">
+                                                    <p>Yung Rick</p>
+                                                </div></a>
+                                            <a href="https://www.instagram.com/hiipivahalko/">
+                                                <div class="well">
+                                                    <p>Hiipivä Halko</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <footer class="container-fluid text-center">
+                                </footer>
+
+                            </body>
+                            </html>
+
+                            </html>
